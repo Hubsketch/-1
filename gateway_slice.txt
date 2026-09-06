@@ -1,0 +1,155 @@
+/* Scheme 1 Gateway Card */
+                    l.jsxs("div", {
+                      id: "scheme1-entry-card",
+                      onClick: () => o("scheme1"),
+                      className:
+                        "bg-linear-to-r from-blue-50/80 via-indigo-50/40 to-white rounded-2xl p-4 shadow-xs border border-blue-200/80 flex items-center justify-between cursor-pointer hover:border-blue-300 transition-all active:scale-[0.99]",
+                      children: [
+                        l.jsxs("div", {
+                          className: "flex items-center space-x-3",
+                          children: [
+                            l.jsx("div", {
+                              className:
+                                "w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-xs",
+                              children: l.jsx(Pv, {
+                                className: "w-5 h-5 stroke-[2.2]",
+                              }),
+                            }),
+                            l.jsxs("div", {
+                              children: [
+                                l.jsxs("div", {
+                                  className: "flex items-center space-x-1.5",
+                                  children: [
+                                    l.jsx("span", {
+                                      className:
+                                        "px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-blue-100 text-blue-700",
+                                      children: "方案1",
+                                    }),
+                                    l.jsx("h4", {
+                                      className:
+                                        "font-bold text-sm text-neutral-900",
+                                      children: "情绪量化回测与策略推演",
+                                    }),
+                                  ],
+                                }),
+                                l.jsx("p", {
+                                  className:
+                                    "text-xs text-neutral-500 mt-0.5",
+                                  children:
+                                    "极度恐慌建仓/贪婪逃顶 · 测算胜率与超额Alpha",
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        l.jsxs("div", {
+                          className:
+                            "flex items-center text-xs font-bold text-blue-600 space-x-0.5",
+                          children: [
+                            l.jsx("span", { children: "立即推演" }),
+                            l.jsx(Cl, { className: "w-4 h-4" }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    /* Scheme 2 Gateway Card */
+                    l.jsxs("div", {
+                      id: "scheme2-entry-card",
+                      onClick: () => o("scheme2"),
+                      className:
+                        "bg-linear-to-r from-purple-50/80 via-fuchsia-50/40 to-white rounded-2xl p-4 shadow-xs border border-purple-200/80 flex items-center justify-between cursor-pointer hover:border-purple-300 transition-all active:scale-[0.99]",
+                      children: [
+                        l.jsxs("div", {
+                          className: "flex items-center space-x-3",
+                          children: [
+                            l.jsx("div", {
+                              className:
+                                "w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white shadow-xs",
+                              children: l.jsx(As, {
+                                className: "w-5 h-5 stroke-[2.2]",
+                              }),
+                            }),
+                            l.jsxs("div", {
+                              children: [
+                                l.jsxs("div", {
+                                  className: "flex items-center space-x-1.5",
+                                  children: [
+                                    l.jsx("span", {
+                                      className:
+                                        "px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-purple-100 text-purple-700",
+                                      children: "方案2",
+                                    }),
+                                    l.jsx("h4", {
+                                      className:
+                                        "font-bold text-sm text-neutral-900",
+                                      children: "AI研报与ETF动态对冲矩阵",
+                                    }),
+                                  ],
+                                }),
+                                l.jsx("p", {
+                                  className:
+                                    "text-xs text-neutral-500 mt-0.5",
+                                  children:
+                                    "Gemini 3.8 Flash宏观因子 + 3套攻防调仓实操方案",
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        l.jsxs("div", {
+                          className:
+                            "flex items-center text-xs font-bold text-purple-600 space-x-0.5",
+                          children: [
+                            l.jsx("span", { children: "查看对冲" }),
+                            l.jsx(Cl, { className: "w-4 h-4" }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    l.jsxs("div", {
+                      id: "what-if-buy-entry-btn",
+                      onClick: () => h("what_if_buy"),
+                      className:
+                        "bg-white rounded-2xl p-4 shadow-xs border border-neutral-200/80 flex items-center justify-between cursor-pointer hover:bg-neutral-50 transition-all active:scale-[0.99]",
+                      children: [
+                        l.jsxs("div", {
+                          className: "flex items-center space-x-3",
+                          children: [
+                            l.jsx("div", {
+                              className:
+                                "w-9 h-9 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200",
+                              children: l.jsx(Ra, {
+                                className: "w-5 h-5 stroke-[2.2]",
+                              }),
+                            }),
+                            l.jsxs("div", {
+                              children: [
+                                l.jsx("h4", {
+                                  className:
+                                    "font-bold text-sm text-neutral-900",
+                                  children: "那时买入会怎样？",
+                                }),
+                                l.jsxs("p", {
+                                  className:
+                                    "text-xs text-neutral-500 mt-0.5 truncate max-w-[240px]",
+                                  children: [
+                                    a === "crypto"
+                                      ? "BTC"
+                                      : a === "kospi"
+                                        ? "KOSPI"
+                                        : "S&P 500",
+                                    " ",
+                                    "— 与当前 ",
+                                    f.score,
+                                    " 分相似的过去区间...",
+                                  ],
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        l.jsx(Cl, { className: "w-4 h-4 text-neutral-400" }),
+                      ],
+                    }),
+                    l.jsxs("div", {
+                      
